@@ -1,0 +1,17 @@
+@use'../base/variables' as v;
+@use'../base/mixins' as m;
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: v.$verde;
+    margin-top: 3rem;
+    box-shadow: -1px -8px 19px 0px rgba(0, 0, 0, 0.75);
+    bottom: 2rem;
+    p {
+        margin: 0;
+        color: v.$blanco;
+        font-size: 1.5rem;
+    }
+}

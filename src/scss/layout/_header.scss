@@ -1,0 +1,45 @@
+@use'../base/variables' as v;
+@use'../base/mixins' as m;
+.header {
+    background-color: v.$verde;
+    width: 100%;
+    box-shadow: 2px 10px 19px -4px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+    @include m.tablet {
+        flex-direction: row;
+    }
+    h1 {
+        margin: 0;
+        font-family: v.$fuente_principal;
+        color: v.$blanco;
+    }
+}
+
+.titulo {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: flex-end;
+    span {
+        font-size: 1.5rem;
+        color: v.$negro;
+    }
+    img {
+        width: 10rem;
+    }
+}
+
+.nav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    a {
+        margin: 0;
+        color: v.$blanco;
+    }
+}

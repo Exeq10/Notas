@@ -1,0 +1,58 @@
+@use'../base/variables' as v;
+@use'../base/mixins' as m;
+.notas_c {
+    margin: 3rem auto 3rem auto;
+    max-width: 120rem;
+    padding: 1.5rem;
+    background-color: lighten($color: v.$verde, $amount: 30);
+    min-height: 60rem
+}
+
+.grid-notas {
+    @include m.grid (1, 2rem);
+    @include m.tablet {
+        @include m.grid (4, 2rem);
+    }
+}
+
+.nota {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #333;
+    padding: 1.5rem;
+    text-align: center;
+    .parrafo {
+        border: 1px solid v.$blanco;
+        padding: 1.5rem;
+        background-color: v.$blanco;
+        width: 100%;
+        height: 100%;
+        p {
+            font-size: 1.3rem;
+        }
+    }
+    header {
+        background-color: darken($color: v.$verde, $amount: 15);
+        margin-bottom: 1rem;
+        padding: 1.5rem;
+        h4 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: v.$blanco;
+        }
+    }
+    footer {
+        background-color: darken($color: v.$naranja, $amount: 5);
+        box-shadow: -1px -8px 19px 0px rgba(0, 0, 0, 0.45);
+        p {
+            margin: 0;
+            color: v.$blanco;
+            font-size: 1rem;
+        }
+    }
+}
+
+.boton-e {
+    margin-top: 1.5rem;
+    @include m.boton (v.$rojo, v.$blanco, darken(v.$rojo, 10), v.$blanco);
+}

@@ -1,0 +1,31 @@
+@use'../base/variables' as v;
+@use'../base/mixins' as m;
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: v.$verde;
+    padding: 2rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    align-items: center;
+    h2 {
+        color: v.$blanco;
+    }
+}
+
+.texto {
+    display: flex;
+    text-align: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+    p {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: v.$blanco;
+    }
+}
+
+.ic {
+    width: 4rem
+}
